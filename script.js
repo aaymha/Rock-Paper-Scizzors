@@ -19,6 +19,8 @@ function computerPlay() {
           wyb = paper;
       } else if(wyb === scizzors) {
           wyb = scizzors;
+      } else {
+          alert('Pick something correct!')
       }
   }     
 
