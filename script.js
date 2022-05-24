@@ -13,14 +13,20 @@ function computerPlay() {
       let paper;
       let scizzors;
       let wyb = prompt('Choose:')
-      if(wyb === rock) {
-          wyb = rock;
-      } else if(wyb === paper) {
-          wyb = paper;
-      } else if(wyb === scizzors) {
-          wyb = scizzors;
-      } else {
-          alert('Pick something correct!')
+      
+      switch(wyb) {
+          case 'rock':
+              return wyb = rock;
+              break;
+          case 'paper':
+              return wyb = paper;
+              break;
+          case 'scizzors':
+              return wyb = scizzors;
+              break;
+          default:
+              alert('Choose correctly')
+              break;
       }
   }     
 
