@@ -5,3 +5,21 @@ function computerPlay() {
   }
   
   computerPlay();
+
+
+
+  function playerSelection() {
+      let rock;
+      let paper;
+      let scizzors;
+      let wyb = prompt('Choose:')
+      if(wyb === rock) {
+          wyb = rock;
+      } else if(wyb === paper) {
+          wyb = paper;
+      } else if(wyb === scizzors) {
+          wyb = scizzors;
+      }
+  }     
+
+  playerSelection();
