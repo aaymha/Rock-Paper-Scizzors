@@ -20,21 +20,17 @@ function playRound(playerSelection, computerSelection) {
     let b = alert("YOU LOST")
   } else if(computerSelection === 'Scizzors') {
     let c = alert("YOU WON")
-  }
-
-  if(playerSelection === 'Paper' && computerSelection === 'Paper') {
+  } else if(playerSelection === 'Paper' && computerSelection === 'Paper') {
     let a = alert("Draw");
   } else if(computerSelection === 'Scizzors') {
     let b = alert("YOU LOST")
   } else if(computerSelection === 'Rock') {
     let c = alert("YOU WON")
-  }
-
-  if(playerSelection === 'Scizzors' && computerSelection === 'Scizzors') {
+  } else if(playerSelection === 'Scizzors' && computerSelection === 'Scizzors') {
     let a = alert("Draw");
-  } else if(computerSelection === 'Paper') {
-    let b = alert("YOU LOST")
   } else if(computerSelection === 'Rock') {
+    let b = alert("YOU LOST")
+  } else if(computerSelection === 'Paper') {
     let c = alert("YOU WON")
   }
 }
