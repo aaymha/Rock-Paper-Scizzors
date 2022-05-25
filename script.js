@@ -5,11 +5,9 @@ function computerPlay() {
 }
 
 function userPlay() {
-van = prompt('Podaj liczbe')
+van = prompt('Choose:')
 return van;
 }
-
-
 
 function playRound(playerSelection, computerSelection) {
   if(userPlay() === 'Rock') {
@@ -20,8 +18,23 @@ function playRound(playerSelection, computerSelection) {
     } else if(computerPlay() === 'Paper') {
       alert('You lost!');
     }
+  } if(userPlay() === 'Paper') {
+    if(computerPlay() === 'Paper') {
+      alert('Tie');
+    } else if(computerPlay() === 'Scizzors') {
+      alert('You lost!')
+    } else if(computerPlay() === 'Paper') {
+      alert('You won!');
+    }
+  } if(userPlay() === 'Scizzors') {
+    if(computerPlay() === 'Scizzors') {
+      alert('Tie');
+    } else if(computerPlay() === 'Rock') {
+      alert('You lost!')
+    } else if(computerPlay() === 'Paper') {
+      alert('You won!');
+    }
   }
-  
 }
 
 playRound();
