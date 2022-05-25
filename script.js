@@ -1,18 +1,27 @@
 function computerPlay() {
-    let tab = ['Rock', 'Paper', 'Scizzors'];
-    let ran = (tab[Math.floor(Math.random() * tab.length)]);
-    return ran;
-  }
-  
-function userPlay() {
-    let pro = prompt('Start fight!')
+  let tab = ['Rock', 'Paper', 'Scizzors'];
+  let ran = (tab[Math.floor(Math.random() * tab.length)]);
+  return ran;
 }
 
-userPlay();
+function userPlay() {
+van = prompt('Podaj liczbe')
+return van;
+}
+
+
 
 function playRound(playerSelection, computerSelection) {
-    
+  if(userPlay() === 'Rock') {
+    if(computerPlay() === 'Rock') {
+      alert('Tie');
+    } else if(computerPlay() === 'Scizzors') {
+      alert('You won')
+    } else if(computerPlay() === 'Paper') {
+      alert('You lost!');
+    }
   }
   
-  const playerSelection = userPlay();
-  const computerSelection = computerPlay();
+}
+
+playRound();
