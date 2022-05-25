@@ -1,3 +1,4 @@
+
 function computerPlay() {
   let tab = ['Rock', 'Paper', 'Scizzors'];
   let ran = (tab[Math.floor(Math.random() * tab.length)]);
@@ -10,31 +11,31 @@ return van;
 }
 
 function playRound(playerSelection, computerSelection) {
-  if(userPlay() === 'Rock') {
-    if(computerPlay() === 'Rock') {
-      alert('Tie');
-    } else if(computerPlay() === 'Scizzors') {
-      alert('You won')
-    } else if(computerPlay() === 'Paper') {
-      alert('You lost!');
-    }
-  } if(userPlay() === 'Paper') {
-    if(computerPlay() === 'Paper') {
-      alert('Tie');
-    } else if(computerPlay() === 'Scizzors') {
-      alert('You lost!')
-    } else if(computerPlay() === 'Paper') {
-      alert('You won!');
-    }
-  } if(userPlay() === 'Scizzors') {
-    if(computerPlay() === 'Scizzors') {
-      alert('Tie');
-    } else if(computerPlay() === 'Rock') {
-      alert('You lost!')
-    } else if(computerPlay() === 'Paper') {
-      alert('You won!');
-    }
+  computerSelection = computerPlay();
+  playerSelection = userPlay();
+
+  if(playerSelection === 'Rock' && computerSelection === 'Rock') {
+    let a = alert("Draw");
+  } else if(computerSelection === 'Paper') {
+    let b = alert("YOU LOST")
+  } else if(computerSelection === 'Scizzors') {
+    let c = alert("YOU WON")
+  }
+
+  if(playerSelection === 'Paper' && computerSelection === 'Paper') {
+    let a = alert("Draw");
+  } else if(computerSelection === 'Scizzors') {
+    let b = alert("YOU LOST")
+  } else if(computerSelection === 'Rock') {
+    let c = alert("YOU WON")
+  }
+
+  if(playerSelection === 'Scizzors' && computerSelection === 'Scizzors') {
+    let a = alert("Draw");
+  } else if(computerSelection === 'Paper') {
+    let b = alert("YOU LOST")
+  } else if(computerSelection === 'Rock') {
+    let c = alert("YOU WON")
   }
 }
-
 playRound();
