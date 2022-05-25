@@ -17,7 +17,9 @@ function playRound(playerSelection, computerSelection) {
   if(playerSelection === 'Rock' && computerSelection === 'Rock') {
     let a = alert("Draw");
   } else if(computerSelection === 'Scizzors') {
-    let b = alert("YOU LOST")
+    let b = alert("YOU WON")
+  } else if(computerSelection === 'Paper') {
+    let go = alert("YOU LOST")
   } else if(playerSelection === 'Paper' && computerSelection === 'Paper') {
     let c = alert("Draw");
   } else if(computerSelection === 'Scizzors') {
