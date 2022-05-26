@@ -36,4 +36,13 @@ function playRound(playerSelection, computerSelection) {
   }
   return playerSelection, computerSelection;
 }
-playRound();
+
+function game() {
+  let compscore;
+  let userscore;
+  for (let i = 0; i < 5; i++) {
+    if()
+ }
+}
+
+game()
