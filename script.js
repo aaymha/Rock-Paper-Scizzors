@@ -34,15 +34,6 @@ function playRound(playerSelection, computerSelection) {
   if(playerSelection === 'Scizzors' && computerSelection === 'Paper') {
     alert('You won!')
   }
-  return playerSelection, computerSelection;
 }
 
-function game() {
-  let compscore;
-  let userscore;
-  for (let i = 0; i < 5; i++) {
-    if()
- }
-}
 
-game()
