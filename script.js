@@ -1,6 +1,8 @@
-let win1 = 'You won!';
-let draw1 = 'Its a draw!';
-let lose1 = 'You got fucked by multiple black men!';
+win1 = 'You won!';
+draw1 = 'Its a draw!';
+lose1 = 'You got fucked by multiple black men!';
+vicotry = 'You won the game!';
+defeat = 'You lost the game!';
 
 function computerPlay() {
   let tab = ['Rock', 'Paper', 'Scizzors'];
@@ -48,19 +50,21 @@ function game() {
   let computerscore = 0;
   for (let i = 0; i < 5; i++) {
     playRound();
-    if(playerSelection == win1) {
+    if(playerSelection = win1) {
       console.log('You won this round!')
       return playerscore++
-    } else if(computerSelection == lose1) {
+    } 
+    if(computerSelection = lose1) {
       console.log('You lost the round!')
       return computerscore++
     }
 
 
-    if(playerscore == 5) {
-      console.log('You won the game!');
-    } else if(computerscore == 5) {
-      console.log('You lost the game!')
+    if(playerscore = 5) {
+      console.log(vicotry);
+      return;
+    } else if(computerscore = 5) {
+      console.log(defeat);
     }
   }
 }
