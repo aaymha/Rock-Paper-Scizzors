@@ -1,6 +1,6 @@
-let playerScore = 0;
-let computerScore = 0;
-
+let win1 = 'You won!';
+let draw1 = 'Its a draw!';
+let lose1 = 'You got fucked by multiple black men!';
 
 function computerPlay() {
   let tab = ['Rock', 'Paper', 'Scizzors'];
@@ -9,46 +9,61 @@ function computerPlay() {
 }
 
 function userPlay() {
-van = prompt('Choose:').toLocaleLowerCase;
+van = prompt('Choose:');
 return van;
 }
 
-function playRound(playerSelection, computerSelection) {
-  computerSelection = computerPlay();
-  playerSelection = userPlay();
+function playRound() {
+  const computerSelection = computerPlay();
+  const playerSelection = userPlay();
 
   if(playerSelection === computerSelection) {
-    alert('Draw');
+    alert(draw1);
   }
   if(playerSelection === 'Rock' && computerSelection === 'Paper') {
-    alert('You lost!')
+   alert(lose1)
   }
   if(playerSelection === 'Rock' && computerSelection === 'Scizzors') {
-    alert('You won!')
+   alert(win1)
   }
   if(playerSelection === 'Paper' && computerSelection === 'Scizzors') {
-    alert('You lost!')
+    alert(lose1)
   }
   if(playerSelection === 'Paper' && computerSelection === 'Rock') {
-    alert('You won!')
+    alert(win1)
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Rock') {
-    alert('You lost!')
+    alert(lose1)
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Paper') {
-    alert('You won!')
+    alert(win1)
   }
 }
 
-let playerWinRound = "You win!"
-let computerWinRound = "You got raped by multiple black men"
-let draw = "Draw!"
-let playerWin = "You won, finally!"
-let computerWin = "Pissed on by pc omegaLuL"
 
 function game() {
+  let playerSelection;
+  let computerSelection;
+  let playerscore = 0;
+  let computerscore = 0;
   for (let i = 0; i < 5; i++) {
     playRound();
-    
+    if(playerSelection == win1) {
+      console.log('You won this round!')
+      return playerscore++
+    } else if(computerSelection == lose1) {
+      console.log('You lost the round!')
+      return computerscore++
+    }
+
+
+    if(playerscore == 5) {
+      console.log('You won the game!');
+    } else if(computerscore == 5) {
+      console.log('You lost the game!')
+    }
   }
 }
+
+game();
+
