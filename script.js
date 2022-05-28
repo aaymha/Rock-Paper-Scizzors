@@ -1,3 +1,7 @@
+let playerScore = 0;
+let computerScore = 0;
+
+
 function computerPlay() {
   let tab = ['Rock', 'Paper', 'Scizzors'];
   let ran = (tab[Math.floor(Math.random() * tab.length)]);
@@ -5,7 +9,7 @@ function computerPlay() {
 }
 
 function userPlay() {
-van = prompt('Choose:')
+van = prompt('Choose:').toLocaleLowerCase;
 return van;
 }
 
@@ -36,4 +40,15 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+let playerWinRound = "You win!"
+let computerWinRound = "You got raped by multiple black men"
+let draw = "Draw!"
+let playerWin = "You won, finally!"
+let computerWin = "Pissed on by pc omegaLuL"
 
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound();
+    
+  }
+}
