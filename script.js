@@ -13,7 +13,9 @@ function userPlay() {
 van = prompt('Choose:');
 return van;
 }
-
+let win1;
+let los1;
+let draw;
 function playRound() {
   let computerSelection = computerPlay();
   let playerSelection = userPlay();
@@ -21,31 +23,40 @@ function playRound() {
     alert('Draw');
   }
   if(playerSelection === 'Rock' && computerSelection === 'Paper') {
-    alert('You got fucked by multiple black men!')
+    let los1 = alert('You got fucked by multiple black men!')
   }
   if(playerSelection === 'Rock' && computerSelection === 'Scizzors') {
-    alert('You won!')
+    let win1 = alert('You won!')
   }
   if(playerSelection === 'Paper' && computerSelection === 'Scizzors') {
-    alert('You got fucked by multiple black men!')
+    let los1 = alert('You got fucked by multiple black men!')
   }
   if(playerSelection === 'Paper' && computerSelection === 'Rock') {
-    alert('You won!')
+    let win1 = alert('You won!')
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Rock') {
-    alert('You got fucked by multiple black men!')
+    let los1 = alert('You got fucked by multiple black men!')
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Paper') {
-    alert('You won!')
+    let los1 = alert('You won!')
   }
   
 }
 
 
-function game() {
+function game(playerSelection, computerSelection){
+  let score = 0;
+  let computerscore = 0;
   for (let i = 0; i < 5; i++) {
     playRound();
+    if(playerSelection == win1){
+      console.log('You won this round!')
+      score++
+    } else if(computerSelection == los1) {
+      console.log('You lost this round!');
+      computerscore++
+    }
   }
 }
 
-game();
+console.log(game())
