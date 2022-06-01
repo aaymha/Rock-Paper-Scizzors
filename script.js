@@ -1,8 +1,3 @@
-vicotry = 'You won the game!';
-defeat = 'You lost the game!';
-
-
-
 function computerPlay() {
   let tab = ['Rock', 'Paper', 'Scizzors'];
   let ran = (tab[Math.floor(Math.random() * tab.length)]);
@@ -13,50 +8,65 @@ function userPlay() {
 van = prompt('Choose:');
 return van;
 }
-let win1;
-let los1;
-let draw;
+
+
 function playRound() {
   let computerSelection = computerPlay();
   let playerSelection = userPlay();
+  
   if(playerSelection === computerSelection) {
-    alert('Draw');
+    alert('Its a draw');
+    return 3;
   }
   if(playerSelection === 'Rock' && computerSelection === 'Paper') {
-    let los1 = alert('You got fucked by multiple black men!')
+   alert('You lost, Paper beats Rock!')
+   return 2;
   }
   if(playerSelection === 'Rock' && computerSelection === 'Scizzors') {
-    let win1 = alert('You won!')
+    alert('You won! Rock beats Scizzors!')
+    return 1;
   }
   if(playerSelection === 'Paper' && computerSelection === 'Scizzors') {
-    let los1 = alert('You got fucked by multiple black men!')
+    alert('You lost, Scizzors beats Paper')
+    return 2;
   }
   if(playerSelection === 'Paper' && computerSelection === 'Rock') {
-    let win1 = alert('You won!')
+    alert('You won! Paper beats Rock')
+    return 1;
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Rock') {
-    let los1 = alert('You got fucked by multiple black men!')
+    alert('You lost! Rock beats Scizzors!')
+    return 2;
   }
   if(playerSelection === 'Scizzors' && computerSelection === 'Paper') {
-    let los1 = alert('You won!')
+    alert('You won! Scizzors beats Paper')
+    return 1;
   }
   
 }
 
 
-function game(playerSelection, computerSelection){
+function game(){
   let score = 0;
   let computerscore = 0;
   for (let i = 0; i < 5; i++) {
     playRound();
-    if(playerSelection == win1){
+    
+    if(playRound() === 1) {
       console.log('You won this round!')
       score++
-    } else if(computerSelection == los1) {
-      console.log('You lost this round!');
+    } else if(playRound() === 2) {
+      console.log('You lost this round!')
       computerscore++
+    } else if(playRound() === 3) {
+      console.log('This round end with a draw!')
     }
   }
+  if(score === 5) {
+      console.log('You won the game!')
+    } else if(computerscore === 5) {
+      console.log('You lost the game!pla')
+    }
 }
 
-console.log(game())
+game()
